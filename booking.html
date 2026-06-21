@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Now</title>
+    <link rel="stylesheet" href="try3.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><img src="npl.jpeg" alt="logo" height="100"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="cars.html">Vehicles</a></li>
+            <li><a href="cont.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+
+
+        <div class="brand-banner">
+            <h1>N L P</h1>
+            <p>Tour & Travel</p>
+        </div>
+
+
+        <div class="booking-card">
+            <h2>✨ Quick Ride Booking</h2>
+            <form class="custom-booking-form" onsubmit="sendToWhatsapp(event)">
+
+                <div class="input-field">
+                    <input type="text" id="cust-name" placeholder=" " required>
+                    <label for="cust-name">Enter Your Name</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" id="pickup-loc" placeholder=" " required>
+                    <label for="pickup-loc">Pickup Location</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" id="drop-loc" placeholder=" " required>
+                    <label for="drop-loc">Drop Location</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="datetime-local" id="date-time" required>
+                    <label for="date-time" class="date-label">Date & Time</label>
+                </div>
+
+                <!-- Car Selection Dropdown -->
+                <div class="input-field select-field">
+                    <select id="car-type" onchange="toggleOtherVehicle(this)" required>
+                <option value="" disabled selected hidden></option>
+                <option value="Fortuner">Fortuner</option>
+                <option value="Scorpio">Scorpio</option>
+                <option value="Dzire (Sedan)">Dzire (Sedan)</option>
+                <option value="Innova (SUV)">Innova (SUV)</option>
+                <option value="Ertiga (SUV)">Ertiga (SUV)</option>
+                <option value="Urbania">Urbania</option>
+                <option value="Tempo Traveller">Tempo Traveller</option>
+                <option value="Mini Bus AC">Mini Bus AC</option>
+                <option value="Big Bus">Big Bus</option>
+                <option value="Double Decker Bus">Double Decker Bus</option>
+                <option value="Other">Other (Specify Below)</option>
+            </select>
+                    <label for="car-type" class="select-label">Select Vehicle</label>
+                </div>
+
+                <!-- Hidden Input for 'Other' option -->
+                <div class="input-field dynamic-field" id="other-vehicle-box">
+                    <input type="text" id="custom-car-name" placeholder=" ">
+                    <label for="custom-car-name">Enter Vehicle Name</label>
+                </div>
+
+                <div class="input-field">
+                    <textarea id="comments" rows="3" placeholder=" "></textarea>
+                    <label for="comments">Any Comment (Optional)</label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+            <span>Book Via WhatsApp</span>
+            <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.905-11.89 11.905-2.005-.001-3.973-.507-5.73-1.472L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.023-5.11-2.884-6.974C16.53 1.848 14.06 .825 11.943.825c-5.438 0-9.863 4.42-9.867 9.86-.001 1.767.463 3.49 1.342 5.022l-.993 3.628 3.722-.977zm11.567-7.294c-.33-.164-1.954-.964-2.254-1.074-.3-.109-.519-.164-.738.164-.22.329-.851 1.074-1.043 1.293-.192.219-.384.246-.714.082-1.205-.603-2.015-1.096-2.815-2.472-.21-.36.21-.334.602-1.12.063-.128.031-.24-.015-.33-.046-.09-.41-1.012-.562-1.378-.148-.358-.31-.31-.426-.316-.11-.006-.237-.006-.364-.006-.128 0-.336.048-.512.24-.176.192-.672.658-.672 1.604s.688 1.863.784 2c.096.137 1.354 2.067 3.28 2.902.459.198.817.317 1.096.406.461.147.88.126 1.212.077.37-.055 1.14-.466 1.3-.915.16-.45.16-.836.112-.916-.048-.08-.176-.124-.506-.288z"/>
+            </svg>
+        </button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 NLP Tour & Travel. All Rights Reserved. <br> Made with ❤️ by Paradice Studio
+    </footer>
+
+    <script src="aaam.js"></script>
+
+</body>
+
+</html>
