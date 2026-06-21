@@ -696,3 +696,116 @@ span.b {
 .submit-btn:active {
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   ADVANCED MOBILE & RESPONSIVE DESIGN FIXES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Header & Navigation Menu Optimization */
+    header {
+        padding: 15px 4%;       /* Inner elements ke liye space kam kiya */
+        flex-direction: column;  /* Logo upar aur Nav links niche stack honge */
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        padding: 0;
+        gap: 15px;
+        flex-wrap: wrap;         /* Choti screen par links automatically split ho jayein */
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    /* 2. Main Content Wrapper Spacing */
+    .container {
+        margin: 25px auto;      /* Desktop par 60px tha, mobile par space kam kiya */
+        padding: 0 16px;         /* Left-Right side me perfect phone margin edge buffer */
+        gap: 25px;               /* Vertical blocks ke beech ka gap system block */
+    }
+
+    /* 3. General White Card Spacing Control (.aa and .booking-box) */
+    .brand-banner, 
+    .booking-box, 
+    .booking-card, 
+    .aa {
+        padding: 25px 16px !important; /* Internal spacing squeeze ki taaki content broad dikhe */
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .brand-banner h1 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 4. Hyper-tight adjustments for smaller smartphones */
+    .container {
+        padding: 0 12px;         /* Intehai chote phones ke liye screen edge safety buffer */
+        margin: 15px auto;
+    }
+
+    .brand-banner {
+        padding: 20px 12px !important;
+    }
+
+    .brand-banner h1 {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+
+    .brand-banner p {
+        font-size: 1.2rem;
+    }
+
+    /* 5. Inputs & Labels Adjustments */
+    .booking-card {
+        padding: 25px 15px !important;
+        border-radius: 12px;     /* Mobile display standard match karne ke liye sharp radii */
+    }
+
+    .booking-card h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .input-field {
+        margin-bottom: 20px;     /* Forms ki spacing natural compact ki gayi */
+    }
+
+    /* 6. Grid Columns Configuration override */
+    /* Cars grid ko images display balance rakhne ke liye space adjust kiya */
+    .vehicle-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 Column strict arrangement */
+        gap: 10px !important;
+    }
+
+    .vehicle-card {
+        padding: 12px 8px !important;
+        border-radius: 12px;
+    }
+
+    .vehicle-title {
+        font-size: 0.9rem !important;
+    }
+
+    .vehicle-desc {
+        display: none;           
+    }
+
+    .card-btn {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+    
+    .book-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
